@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniQ | Premium Online Furniture Store</title>
+    <meta name="description" content="FurniQ - Explore & shop exclusive home furniture online at the best prices. FREE shipping, No cost EMI.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Utility Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-left">
+                <a href="#"><i class="fas fa-store"></i> Stores</a>
+                <a href="#"><i class="fas fa-box-open"></i> Bulk Order</a>
+            </div>
+            <div class="top-header-right">
+                <a href="tel:+919314444747"><i class="fas fa-phone-alt"></i> +91-9314444747</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Track Order</a>
+                <a href="#"><i class="fas fa-info-circle"></i> Help Center</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-content">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <h1>FurniQ<span>.</span></h1>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search for furniture, decor, and more...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- User Actions -->
+            <div class="user-actions">
+                <a href="login.html" class="action-item">
+                    <i class="far fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="action-item">
+                    <i class="far fa-heart"></i>
+                    <span>Wishlist (0)</span>
+                </a>
+                <a href="cart.html" class="action-item cart-action">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart (0)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item has-dropdown">
+                    <a href="#">Sofas <i class="fas fa-chevron-down"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-col">
+                            <h4>By Type</h4>
+                            <a href="#">Fabric Sofas</a>
+                            <a href="#">Wooden Sofas</a>
+                            <a href="#">L-Shaped Sofas</a>
+                            <a href="#">Sofa Cum Beds</a>
+                        </div>
+                        <div class="mega-menu-col">
+                            <h4>By Seater</h4>
+                            <a href="#">1 Seater Sofas</a>
+                            <a href="#">2 Seater Sofas</a>
+                            <a href="#">3 Seater Sofas</a>
+                            <a href="#">Sofa Sets</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#">Living</a></li>
+                <li class="nav-item"><a href="#">Bedroom</a></li>
+                <li class="nav-item"><a href="#">Dining</a></li>
+                <li class="nav-item"><a href="#">Storage</a></li>
+                <li class="nav-item"><a href="#">Study & Office</a></li>
+                <li class="nav-item"><a href="#">Outdoor</a></li>
+                <li class="nav-item"><a href="#">Decor</a></li>
+                <li class="nav-item highlight"><a href="#">Sale (Up to 50% Off)</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section (Carousel) -->
+        <section class="hero-section">
+            <div class="carousel-container">
+                <div class="carousel-slide active" style="background-color: #f4f0ec;">
+                    <div class="carousel-content container">
+                        <div class="hero-text">
+                            <h2>Elevate Your Living Space</h2>
+                            <p>Discover premium furniture pieces designed for comfort and style. Up to 50% Off on bestsellers.</p>
+                            <a href="#" class="btn-primary">Shop Now</a>
+                        </div>
+                        <div class="hero-image">
+                            <!-- Image will be injected via JS or CSS -->
+                            <img src="images/hero-1.png" alt="Premium Living Room Sofa" onerror="this.src='https://via.placeholder.com/600x400?text=Premium+Sofa'">
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel controls -->
+                <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Banner -->
+        <section class="features-banner">
+            <div class="container features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-truck-fast"></i>
+                    <div>
+                        <h4>Free Shipping</h4>
+                        <p>On all orders above ₹5000</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h4>1 Year Warranty</h4>
+                        <p>Quality guaranteed</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-credit-card"></i>
+                    <div>
+                        <h4>No Cost EMI</h4>
+                        <p>Available on major cards</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <div>
+                        <h4>24/7 Support</h4>
+                        <p>Dedicated help center</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop by Category -->
+        <section class="categories-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Explore By Category</h2>
+                    <p>Find exactly what you need for every room</p>
+                </div>
+                <div class="category-grid">
+                    <a href="#" class="category-card">
+                        <div class="cat-img">
+                            <img src="https://via.placeholder.com/300x300?text=Sofas" alt="Sofas">
+                        </div>
+                        <h3>Sofas</h3>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="cat-img">
+                            <img src="https://via.placeholder.com/300x300?text=Beds" alt="Beds">
+                        </div>
+                        <h3>Beds</h3>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="cat-img">
+                            <img src="https://via.placeholder.com/300x300?text=Dining" alt="Dining">
+                        </div>
+                        <h3>Dining</h3>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="cat-img">
+                            <img src="https://via.placeholder.com/300x300?text=Storage" alt="Storage">
+                        </div>
+                        <h3>Storage</h3>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="cat-img">
+                            <img src="https://via.placeholder.com/300x300?text=Decor" alt="Decor">
+                        </div>
+                        <h3>Decor</h3>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="cat-img">
+                            <img src="https://via.placeholder.com/300x300?text=Office" alt="Office">
+                        </div>
+                        <h3>Office</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Sellers / Product Grid -->
+        <section class="products-section section-padding bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Best Sellers</h2>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Dynamic Product Container -->
+                <div class="product-grid" id="featured-products">
+                    <!-- Products will be injected here via JavaScript -->
+                    <div class="loading-spinner">Loading products...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-col brand-col">
+                <h2 class="footer-logo">FurniQ<span>.</span></h2>
+                <p>Your one-stop destination for premium online furniture in India. We design pieces that bring life to your living spaces.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Franchise</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter-col">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get updates on exclusive offers and new arrivals.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email ID" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 FurniQ. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
