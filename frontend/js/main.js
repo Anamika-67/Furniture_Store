@@ -8,11 +8,52 @@ const API_BASE_URL = 'http://localhost:5000/api'; // Adjust based on your backen
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize UI Components
     initCarousel();
-    
+
     // 2. Fetch and render products
     fetchBestSellers();
 });
 
+/* =========================================
+HERO IMAGE AUTO SLIDER
+========================================= */
+
+const imageSlides = document.querySelectorAll('.image-slide');
+
+let currentImageSlide = 0;
+
+/* SHOW ACTIVE SLIDE */
+
+function showImageSlide(index) {
+
+    imageSlides.forEach((slide) => {
+        slide.classList.remove('active');
+    });
+
+    imageSlides[index].classList.add('active');
+}
+
+/* NEXT SLIDE */
+
+function nextImageSlide() {
+
+    currentImageSlide++;
+
+    if (currentImageSlide >= imageSlides.length) {
+        currentImageSlide = 0;
+    }
+
+    showImageSlide(currentImageSlide);
+}
+
+/* FIRST IMAGE SHOW */
+
+showImageSlide(currentImageSlide);
+
+/* AUTO SLIDE */
+
+setInterval(() => {
+    nextImageSlide();
+}, 2000);
 /**
  * Initialize the Hero Carousel (Simple implementation)
  */
@@ -27,20 +68,20 @@ function initCarousel() {
  */
 async function fetchBestSellers() {
     const productGrid = document.getElementById('featured-products');
-    
+
     try {
         // We will fetch from the existing Express backend
         const response = await fetch(`${API_BASE_URL}/products`);
-        
+
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-        
+
         const data = await response.json();
         const products = data.products || data; // Handle depending on exact backend response format
-        
+
         renderProducts(products, productGrid);
-        
+
     } catch (error) {
         console.error('Error fetching products:', error);
         // Fallback to dummy data for demonstration if backend is not running
@@ -74,7 +115,7 @@ function renderProducts(products, container) {
 function createProductCard(product) {
     const card = document.createElement('div');
     card.className = 'product-card';
-    
+
     // Fallback image handling
     let imageUrl = 'https://via.placeholder.com/400x400?text=No+Image';
     if (product.images && product.images.length > 0) {
@@ -126,14 +167,14 @@ function renderDummyProducts(container) {
     const dummyProducts = [
         { _id: '1', name: 'Berlin 3 Seater Fabric Sofa (Indigo Blue)', price: 25999, category: 'Sofas', image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80' },
         { _id: '2', name: 'Walken Bed With Storage (King Size, Honey Finish)', price: 34500, category: 'Beds', image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500&q=80' },
-        { _id: '3', name: 'Adolph 6 Seater Dining Set (Walnut Finish)', price: 42000, category: 'Dining', image: 'https://images.unsplash.com/photo-1617806118233-18e1c0945594?w=500&q=80' },
+        { _id: '3', name: 'Adolph 6 Seater Dining Set (Walnut Finish)', price: 42000, category: 'Dining', image: 'https://i.pinimg.com/736x/d2/38/61/d23861b05879b5c67ea814a67f03f138.jpg' },
         { _id: '4', name: 'Cambrey Executive Desk (Teak Finish)', price: 18500, category: 'Study', image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=500&q=80' },
         { _id: '5', name: 'Marriott Lounge Chair (Teal)', price: 12999, category: 'Chairs', image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=500&q=80' },
-        { _id: '6', name: 'Boho 3 Door Wardrobe (Honey Finish)', price: 29999, category: 'Storage', image: 'https://images.unsplash.com/photo-1595514535319-74d7547432ea?w=500&q=80' },
+        { _id: '6', name: 'Boho 3 Door Wardrobe (Honey Finish)', price: 29999, category: 'Storage', image: 'https://i.pinimg.com/736x/d3/42/32/d34232b0f8b48070a9a93b5e28692f49.jpg' },
         { _id: '7', name: 'Nectar Coffee Table (Walnut Finish)', price: 8500, category: 'Tables', image: 'https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?w=500&q=80' },
         { _id: '8', name: 'Snuggle Tufted Bed (Queen Size, Irish Cream)', price: 28000, category: 'Beds', image: 'https://images.unsplash.com/photo-1505693314120-0d443867891c?w=500&q=80' }
     ];
-    
+
     renderProducts(dummyProducts, container);
 }
 
